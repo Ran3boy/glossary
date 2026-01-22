@@ -1,0 +1,422 @@
+:root{
+  --bg: #0b1020;
+  --bg2: #090d1a;
+  --panel: rgba(255,255,255,.06);
+  --panel2: rgba(255,255,255,.09);
+  --text: #e5e7eb;
+  --muted: rgba(229,231,235,.70);
+  --border: rgba(255,255,255,.12);
+  --shadow: 0 12px 40px rgba(0,0,0,.45);
+  --radius: 18px;
+}
+
+*{ box-sizing: border-box; }
+html, body { height: 100%; }
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(99,102,241,.28) 0%, rgba(99,102,241,0) 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(34,211,238,.18) 0%, rgba(34,211,238,0) 55%),
+    radial-gradient(900px 500px at 60% 85%, rgba(236,72,153,.14) 0%, rgba(236,72,153,0) 55%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+}
+
+a{ color: inherit; }
+
+.page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px;
+}
+
+.topbar-left{
+  display:flex;
+  align-items:flex-end;
+  gap: 18px;
+  min-width: 0;
+}
+
+.titleblock{
+  display:flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.title{
+  font-weight: 900;
+  letter-spacing: .2px;
+  line-height: 1.05;
+  font-size: 16px;
+}
+.subtitle{
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.2;
+  max-width: 52ch;
+}
+
+.topbar-right{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+
+.userchip{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  max-width: 44vw;
+}
+.avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+  font-size: 12px;
+  background: rgba(99,102,241,.25);
+  border: 1px solid rgba(99,102,241,.35);
+}
+.username{
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap: wrap;
+}
+
+.tab{
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .05s ease, background .2s ease, border-color .2s ease;
+}
+.tab:hover{ transform: translateY(-1px); background: var(--panel2); }
+.tab.active{
+  background: rgba(99,102,241,.22);
+  border-color: rgba(99,102,241,.45);
+}
+
+.brand .badge{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 900;
+  letter-spacing: .8px;
+}
+
+.main{
+  flex:1;
+  display:flex;
+  gap: 16px;
+  padding: 0 18px 18px;
+  min-height: 0;
+}
+
+.main-left{
+  flex: 1;
+  min-width: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.content{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.toolbar{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.search{
+  flex:1;
+  max-width: 560px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+}
+.search::placeholder{ color: rgba(229,231,235,.55); }
+
+.hint{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.grid{
+  flex:1;
+  min-height: 0;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+  overflow:auto;
+  padding-right: 2px;
+
+  /* важно: не растягивать карточки на всю высоту при малом количестве результатов */
+  align-content: start;
+  align-items: start;
+  grid-auto-rows: max-content;
+}
+
+.card{
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text); /* важно для button: иначе браузер может поставить черный текст */
+  border-radius: var(--radius);
+  padding: 16px 16px 16px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: none;
+  transition: transform .07s ease, box-shadow .2s ease, background .2s ease;
+  height: 170px;           /* фиксируем высоту, чтобы она не “разъезжалась” при поиске */
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.card:hover{
+  transform: translateY(-1px);
+  background: var(--panel2);
+  box-shadow: var(--shadow);
+}
+.card-title{
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.1;
+  margin: 0;
+}
+.card-body{
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.35;
+  margin: 0;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.sidepanel{
+  width: 380px;
+  max-width: 42vw;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction: column;
+  min-height: 0;
+  backdrop-filter: blur(10px);
+}
+
+.sidepanel-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  padding: 14px 14px 10px;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.sidepanel-title{
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.iconbtn{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.sidepanel-body{
+  padding: 12px 14px 14px;
+  overflow:auto;
+}
+
+.definition{
+  color: rgba(229,231,235,.92);
+  font-size: 14px;
+  line-height: 1.45;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.section{
+  margin-top: 14px;
+}
+.section-title{
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: rgba(229,231,235,.78);
+}
+.sources{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(229,231,235,.84);
+}
+.sources a{
+  color: rgba(34,211,238,.90);
+  text-decoration: none;
+}
+.sources a:hover{ text-decoration: underline; }
+
+.mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  color: rgba(229,231,235,.74);
+}
+
+.graphwrap{
+  height: 100%;
+  min-height: 0;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius);
+  overflow:hidden;
+  /* Performance: avoid repeating radial dot patterns (they can be expensive to repaint during pan/zoom). */
+  background:
+    radial-gradient(1200px 800px at 18% 20%, rgba(99,102,241,0.20), transparent 60%),
+    radial-gradient(1200px 800px at 78% 78%, rgba(236,72,153,0.16), transparent 60%),
+    linear-gradient(135deg, rgba(2,6,23,0.98), rgba(11,16,32,0.98));
+  position: relative;
+}
+
+.graphwrap .react-flow{
+  background: transparent;
+}
+
+.graphactions{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 25;
+}
+
+.btn{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(229,231,235,.95);
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+.btn:hover{ background: rgba(255,255,255,0.12); }
+
+.graphhint{
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: rgba(229,231,235,.68);
+  backdrop-filter: blur(8px);
+}
+
+.error{
+  margin: 0 18px 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(239,68,68,.35);
+  background: rgba(239,68,68,.10);
+  color: rgba(254,202,202,.95);
+  font-size: 13px;
+}
+
+/* =========================
+   React Flow – Edge colors
+   ========================= */
+
+/* базовый цвет линий (чтобы не были "чёрными") */
+.react-flow__edge-path {
+  stroke: rgba(255, 255, 255, 0.35) !important;
+  stroke-width: 1.2 !important;
+}
+
+/* подписи на связях */
+.react-flow__edge-text {
+  fill: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600;
+}
+
+/* фон-табличка у подписи (если ReactFlow рисует rect) */
+.react-flow__edge-textbg {
+  fill: rgba(0, 0, 0, 0.35) !important;
+}
+
+/* стрелки (если включены markerEnd) */
+.react-flow__arrowhead path {
+  fill: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* ✅ при наведении: линия белая */
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: #ffffff !important;
+  stroke-width: 2.2 !important;
+}
+
+/* ✅ при наведении: текст тоже белый */
+.react-flow__edge:hover .react-flow__edge-text {
+  fill: #ffffff !important;
+}
+
+/* ✅ если edge становится "selected" (когда ты кликаешь или подсвечиваешь) */
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #ffffff !important;
+  stroke-width: 2.2 !important;
+}
+.react-flow__edge.selected .react-flow__edge-text {
+  fill: #ffffff !important;
+}
+  

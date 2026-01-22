@@ -1,0 +1,761 @@
+{
+  "terms": [
+    {
+      "id": "web_components",
+      "title": "Web Components",
+      "definition": "Набор стандартов платформы Web (Custom Elements, Shadow DOM и HTML Templates), позволяющий создавать переиспользуемые инкапсулированные UI‑компоненты без привязки к конкретному фреймворку.",
+      "sources": [
+        {
+          "title": "MDN: Web Components",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
+        },
+        {
+          "title": "WHATWG/HTML: Custom elements & templates",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ],
+      "position": {
+        "x": 170,
+        "y": 162
+      }
+    },
+    {
+      "id": "custom_elements",
+      "title": "Custom Elements",
+      "definition": "Стандарт для определения собственных HTML‑элементов (например, <my-card>) с жизненным циклом и API через JavaScript-классы.",
+      "sources": [
+        {
+          "title": "MDN: Using custom elements",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements"
+        }
+      ],
+      "position": {
+        "x": 351,
+        "y": 202
+      }
+    },
+    {
+      "id": "shadow_dom",
+      "title": "Shadow DOM",
+      "definition": "Механизм инкапсуляции DOM-дерева и стилей внутри компонента, изолирующий разметку и CSS от внешней страницы.",
+      "sources": [
+        {
+          "title": "MDN: Shadow DOM",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"
+        }
+      ],
+      "position": {
+        "x": 587,
+        "y": 170
+      }
+    },
+    {
+      "id": "html_templates",
+      "title": "HTML Templates",
+      "definition": "Шаблоны <template> и <slot>, позволяющие декларативно описывать структуру компонента и вставлять контент пользователя.",
+      "sources": [
+        {
+          "title": "MDN: <template>",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template"
+        },
+        {
+          "title": "MDN: <slot>",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot"
+        }
+      ],
+      "position": {
+        "x": 144,
+        "y": 303
+      }
+    },
+    {
+      "id": "slots",
+      "title": "Slots",
+      "definition": "Точки вставки контента в Shadow DOM, через которые внешний HTML попадает внутрь компонента (слоты именованные и по умолчанию).",
+      "sources": [
+        {
+          "title": "MDN: <slot>",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot"
+        }
+      ],
+      "position": {
+        "x": 397,
+        "y": 301
+      }
+    },
+    {
+      "id": "dom",
+      "title": "DOM",
+      "definition": "Document Object Model — объектное представление HTML-документа в памяти браузера, с которым работает JS и фреймворки.",
+      "sources": [
+        {
+          "title": "MDN: DOM",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+        }
+      ],
+      "position": {
+        "x": 613,
+        "y": 342
+      }
+    },
+    {
+      "id": "virtual_dom",
+      "title": "Virtual DOM",
+      "definition": "Абстрактное представление UI в памяти, используемое некоторыми фреймворками для вычисления минимальных изменений в реальном DOM (diff/patch).",
+      "sources": [
+        {
+          "title": "React: Rendering & Reconciliation",
+          "url": "https://react.dev/learn/render-and-commit"
+        }
+      ],
+      "position": {
+        "x": 617,
+        "y": 137
+      }
+    },
+    {
+      "id": "reactivity",
+      "title": "Реактивность",
+      "definition": "Модель обновления UI, при которой изменения состояния автоматически приводят к обновлению зависимых частей интерфейса (сигналы, вычисляемые значения, эффекты).",
+      "sources": [
+        {
+          "title": "Vue: Reactivity in Depth",
+          "url": "https://vuejs.org/guide/extras/reactivity-in-depth.html"
+        }
+      ],
+      "position": {
+        "x": 811,
+        "y": 140
+      }
+    },
+    {
+      "id": "compile_time",
+      "title": "Компиляция UI",
+      "definition": "Подход, когда часть логики обновления UI переносится на этап сборки (compile-time), уменьшая накладные расходы во время выполнения.",
+      "sources": [
+        {
+          "title": "Svelte: Introduction",
+          "url": "https://svelte.dev/docs/svelte/overview"
+        }
+      ],
+      "position": {
+        "x": 1043,
+        "y": 149
+      }
+    },
+    {
+      "id": "lit",
+      "title": "Lit",
+      "definition": "Лёгкая библиотека для создания Web Components с декларативными шаблонами и реактивными свойствами, минимизирующая boilerplate.",
+      "sources": [
+        {
+          "title": "Lit: Docs",
+          "url": "https://lit.dev/docs/"
+        }
+      ],
+      "position": {
+        "x": 181,
+        "y": 397
+      }
+    },
+    {
+      "id": "stencil",
+      "title": "Stencil",
+      "definition": "Компилятор для генерации быстрых Web Components (в т.ч. с lazy‑loading) из TypeScript/JSX, популярен в дизайн‑системах.",
+      "sources": [
+        {
+          "title": "Stencil: Docs",
+          "url": "https://stenciljs.com/docs/introduction"
+        }
+      ],
+      "position": {
+        "x": 396,
+        "y": 424
+      }
+    },
+    {
+      "id": "react",
+      "title": "React",
+      "definition": "Фронтенд-библиотека для построения UI на основе компонентов и состояния; широко используется вместе с экосистемой роутинга/стейта/SSR.",
+      "sources": [
+        {
+          "title": "React: Документация",
+          "url": "https://react.dev/"
+        }
+      ],
+      "position": {
+        "x": 622,
+        "y": 313
+      }
+    },
+    {
+      "id": "vue",
+      "title": "Vue",
+      "definition": "Прогрессивный фреймворк для UI с реактивностью и компонентной моделью; поддерживает SFC и композиционный API.",
+      "sources": [
+        {
+          "title": "Vue: Документация",
+          "url": "https://vuejs.org/guide/introduction.html"
+        }
+      ],
+      "position": {
+        "x": 811,
+        "y": 310
+      }
+    },
+    {
+      "id": "angular",
+      "title": "Angular",
+      "definition": "Полноценный фреймворк для SPA со строгой архитектурой, DI, RxJS и TypeScript как основой разработки.",
+      "sources": [
+        {
+          "title": "Angular: Docs",
+          "url": "https://angular.dev/"
+        }
+      ],
+      "position": {
+        "x": 1042,
+        "y": 320
+      }
+    },
+    {
+      "id": "svelte",
+      "title": "Svelte",
+      "definition": "Фреймворк, который компилирует компоненты в оптимизированный JS без Virtual DOM, снижая runtime‑накладные расходы.",
+      "sources": [
+        {
+          "title": "Svelte: Docs",
+          "url": "https://svelte.dev/docs"
+        }
+      ],
+      "position": {
+        "x": 631,
+        "y": 459
+      }
+    },
+    {
+      "id": "solid",
+      "title": "SolidJS",
+      "definition": "UI-библиотека с fine‑grained реактивностью (сигналы) и минимальным runtime; обновляет DOM точечно, без Virtual DOM-диффинга.",
+      "sources": [
+        {
+          "title": "Solid: Docs",
+          "url": "https://www.solidjs.com/docs/latest/api"
+        }
+      ],
+      "position": {
+        "x": 844,
+        "y": 441
+      }
+    },
+    {
+      "id": "qwik",
+      "title": "Qwik",
+      "definition": "Фреймворк с фокусом на моментальный старт (resumability) и очень мелкую нарезку кода для быстрой загрузки и взаимодействия.",
+      "sources": [
+        {
+          "title": "Qwik: Docs",
+          "url": "https://qwik.dev/docs/"
+        }
+      ],
+      "position": {
+        "x": 1044,
+        "y": 443
+      }
+    },
+    {
+      "id": "typescript",
+      "title": "TypeScript",
+      "definition": "Надстройка над JavaScript со статической типизацией и инструментами, повышающими качество крупных фронтенд‑проектов.",
+      "sources": [
+        {
+          "title": "TypeScript: Handbook",
+          "url": "https://www.typescriptlang.org/docs/handbook/intro.html"
+        }
+      ],
+      "position": {
+        "x": 627,
+        "y": 572
+      }
+    },
+    {
+      "id": "bundler",
+      "title": "Сборщик (Bundler)",
+      "definition": "Инструмент, который собирает модули и ассеты в оптимизированные бандлы, выполняя трансформации, минификацию и разбиение по чанкам.",
+      "sources": [
+        {
+          "title": "Vite: Why Vite",
+          "url": "https://vite.dev/guide/why.html"
+        }
+      ],
+      "position": {
+        "x": 641,
+        "y": 395
+      }
+    },
+    {
+      "id": "vite",
+      "title": "Vite",
+      "definition": "Инструмент разработки и сборки, использующий native ESM для dev и Rollup для production‑сборок; часто применяется с React/Vue/Svelte.",
+      "sources": [
+        {
+          "title": "Vite: Docs",
+          "url": "https://vite.dev/guide/"
+        }
+      ],
+      "position": {
+        "x": 858,
+        "y": 405
+      }
+    },
+    {
+      "id": "tree_shaking",
+      "title": "Tree-shaking",
+      "definition": "Удаление неиспользуемого кода при сборке на основе анализа импортов/экспортов (ESM), уменьшающее размер бандла.",
+      "sources": [
+        {
+          "title": "Rollup: Tree-shaking",
+          "url": "https://rollupjs.org/guide/en/#tree-shaking"
+        }
+      ],
+      "position": {
+        "x": 1074,
+        "y": 422
+      }
+    },
+    {
+      "id": "ssr",
+      "title": "SSR (Server-Side Rendering)",
+      "definition": "Рендеринг HTML на сервере для ускорения первого отображения и улучшения SEO; обычно дополняется гидратацией на клиенте.",
+      "sources": [
+        {
+          "title": "MDN: Server-side website programming",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/Server-side"
+        }
+      ],
+      "position": {
+        "x": 611,
+        "y": 552
+      }
+    },
+    {
+      "id": "hydration",
+      "title": "Гидратация",
+      "definition": "Процесс “оживления” серверного HTML на клиенте: привязка обработчиков событий и состояния к уже отрисованной разметке.",
+      "sources": [
+        {
+          "title": "React: Hydration",
+          "url": "https://react.dev/reference/react-dom/client/hydrateRoot"
+        }
+      ],
+      "position": {
+        "x": 819,
+        "y": 548
+      }
+    },
+    {
+      "id": "islands",
+      "title": "Islands Architecture",
+      "definition": "Архитектура, где страница в основном статична, а интерактивность подключается в виде “островков” компонентов, уменьшая JS на клиенте.",
+      "sources": [
+        {
+          "title": "Astro: Islands",
+          "url": "https://docs.astro.build/en/concepts/islands/"
+        }
+      ],
+      "position": {
+        "x": 1078,
+        "y": 556
+      }
+    },
+    {
+      "id": "micro_frontends",
+      "title": "Микрофронтенды",
+      "definition": "Подход к разбиению фронтенда на независимые части/команды с отдельным деплоем и интеграцией на уровне маршрутов/компонентов.",
+      "sources": [
+        {
+          "title": "micro-frontends.org",
+          "url": "https://micro-frontends.org/"
+        }
+      ],
+      "position": {
+        "x": 596,
+        "y": 680
+      }
+    },
+    {
+      "id": "design_system",
+      "title": "Дизайн‑система",
+      "definition": "Набор правил, компонентов и токенов (цвета, типографика, отступы), обеспечивающий единый UI во всех продуктах.",
+      "sources": [
+        {
+          "title": "IBM Carbon Design System",
+          "url": "https://carbondesignsystem.com/"
+        }
+      ],
+      "position": {
+        "x": 834,
+        "y": 681
+      }
+    },
+    {
+      "id": "css_encapsulation",
+      "title": "Инкапсуляция CSS",
+      "definition": "Ограничение области действия стилей: через Shadow DOM, CSS Modules, scoped CSS или runtime‑генерацию классов.",
+      "sources": [
+        {
+          "title": "MDN: Shadow DOM styling",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM#styling"
+        }
+      ],
+      "position": {
+        "x": 187,
+        "y": 469
+      }
+    },
+    {
+      "id": "interop",
+      "title": "Совместимость компонентов",
+      "definition": "Способность UI‑компонентов работать в разных средах (разные фреймворки/без фреймворков), включая упаковку, события и стили.",
+      "sources": [
+        {
+          "title": "Open WC: Guides",
+          "url": "https://open-wc.org/guides/"
+        }
+      ],
+      "position": {
+        "x": 355,
+        "y": 472
+      }
+    },
+    {
+      "id": "state_management",
+      "title": "Управление состоянием",
+      "definition": "Практики и библиотеки для хранения и обновления состояния приложения (локально в компоненте или глобально).",
+      "sources": [
+        {
+          "title": "Redux: Essentials",
+          "url": "https://redux.js.org/tutorials/essentials/part-1-overview-concepts"
+        }
+      ],
+      "position": {
+        "x": 1052,
+        "y": 697
+      }
+    },
+    {
+      "id": "routing",
+      "title": "Маршрутизация",
+      "definition": "Механизм навигации внутри SPA/MPA: сопоставление URL с экраном/компонентом и загрузка данных для маршрута.",
+      "sources": [
+        {
+          "title": "React Router",
+          "url": "https://reactrouter.com/en/main"
+        }
+      ],
+      "position": {
+        "x": 628,
+        "y": 831
+      }
+    },
+    {
+      "id": "a11y",
+      "title": "Доступность (a11y)",
+      "definition": "Проектирование UI для пользователей с ограничениями: семантика, клавиатурная навигация, ARIA‑атрибуты, контраст.",
+      "sources": [
+        {
+          "title": "WAI-ARIA Authoring Practices",
+          "url": "https://www.w3.org/WAI/ARIA/apg/"
+        }
+      ],
+      "position": {
+        "x": 604,
+        "y": 402
+      }
+    },
+    {
+      "id": "performance",
+      "title": "Производительность UI",
+      "definition": "Набор характеристик скорости и отзывчивости интерфейса: время загрузки, плавность, скорость реакции на ввод.",
+      "sources": [
+        {
+          "title": "Web Vitals",
+          "url": "https://web.dev/vitals/"
+        }
+      ],
+      "position": {
+        "x": 189,
+        "y": 559
+      }
+    },
+    {
+      "id": "lcp",
+      "title": "LCP (Largest Contentful Paint)",
+      "definition": "Метрика Web Vitals, измеряющая время до отрисовки самого крупного видимого элемента на странице.",
+      "sources": [
+        {
+          "title": "web.dev: LCP",
+          "url": "https://web.dev/articles/lcp"
+        }
+      ],
+      "position": {
+        "x": 355,
+        "y": 570
+      }
+    },
+    {
+      "id": "bundle_size",
+      "title": "Размер бандла",
+      "definition": "Объём JS/CSS, загружаемый клиентом; влияет на время загрузки и интерактивность, особенно на слабых устройствах.",
+      "sources": [
+        {
+          "title": "web.dev: Reduce JavaScript payloads",
+          "url": "https://web.dev/articles/reduce-javascript-payloads-with-code-splitting"
+        }
+      ],
+      "position": {
+        "x": 588,
+        "y": 575
+      }
+    },
+    {
+      "id": "testing",
+      "title": "Тестирование UI",
+      "definition": "Подходы и инструменты для проверки компонентов: unit, integration, e2e; снапшоты, тесты доступности.",
+      "sources": [
+        {
+          "title": "Testing Library",
+          "url": "https://testing-library.com/docs/"
+        }
+      ],
+      "position": {
+        "x": 169,
+        "y": 698
+      }
+    },
+    {
+      "id": "storybook",
+      "title": "Storybook",
+      "definition": "Инструмент для изолированной разработки, документации и визуального тестирования UI‑компонентов.",
+      "sources": [
+        {
+          "title": "Storybook: Docs",
+          "url": "https://storybook.js.org/docs"
+        }
+      ],
+      "position": {
+        "x": 386,
+        "y": 687
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_web_components_custom_elements",
+      "source": "web_components",
+      "target": "custom_elements",
+      "label": "состоит из"
+    },
+    {
+      "id": "e_web_components_shadow_dom",
+      "source": "web_components",
+      "target": "shadow_dom",
+      "label": "состоит из"
+    },
+    {
+      "id": "e_web_components_html_templates",
+      "source": "web_components",
+      "target": "html_templates",
+      "label": "состоит из"
+    },
+    {
+      "id": "e_shadow_dom_slots",
+      "source": "shadow_dom",
+      "target": "slots",
+      "label": "использует"
+    },
+    {
+      "id": "e_shadow_dom_css_encapsulation",
+      "source": "shadow_dom",
+      "target": "css_encapsulation",
+      "label": "обеспечивает"
+    },
+    {
+      "id": "e_custom_elements_dom",
+      "source": "custom_elements",
+      "target": "dom",
+      "label": "расширяет"
+    },
+    {
+      "id": "e_web_components_interop",
+      "source": "web_components",
+      "target": "interop",
+      "label": "помогает"
+    },
+    {
+      "id": "e_lit_web_components",
+      "source": "lit",
+      "target": "web_components",
+      "label": "реализация"
+    },
+    {
+      "id": "e_stencil_web_components",
+      "source": "stencil",
+      "target": "web_components",
+      "label": "генерирует"
+    },
+    {
+      "id": "e_react_virtual_dom",
+      "source": "react",
+      "target": "virtual_dom",
+      "label": "часто использует"
+    },
+    {
+      "id": "e_vue_reactivity",
+      "source": "vue",
+      "target": "reactivity",
+      "label": "основан на"
+    },
+    {
+      "id": "e_svelte_compile_time",
+      "source": "svelte",
+      "target": "compile_time",
+      "label": "компилирует"
+    },
+    {
+      "id": "e_solid_reactivity",
+      "source": "solid",
+      "target": "reactivity",
+      "label": "fine‑grained"
+    },
+    {
+      "id": "e_angular_typescript",
+      "source": "angular",
+      "target": "typescript",
+      "label": "использует"
+    },
+    {
+      "id": "e_bundler_tree_shaking",
+      "source": "bundler",
+      "target": "tree_shaking",
+      "label": "поддерживает"
+    },
+    {
+      "id": "e_vite_bundler",
+      "source": "vite",
+      "target": "bundler",
+      "label": "реализует"
+    },
+    {
+      "id": "e_ssr_hydration",
+      "source": "ssr",
+      "target": "hydration",
+      "label": "требует"
+    },
+    {
+      "id": "e_islands_ssr",
+      "source": "islands",
+      "target": "ssr",
+      "label": "часто сочетает"
+    },
+    {
+      "id": "e_micro_frontends_interop",
+      "source": "micro_frontends",
+      "target": "interop",
+      "label": "усложняет"
+    },
+    {
+      "id": "e_design_system_storybook",
+      "source": "design_system",
+      "target": "storybook",
+      "label": "документируется"
+    },
+    {
+      "id": "e_testing_a11y",
+      "source": "testing",
+      "target": "a11y",
+      "label": "включает проверки"
+    },
+    {
+      "id": "e_performance_lcp",
+      "source": "performance",
+      "target": "lcp",
+      "label": "измеряется"
+    },
+    {
+      "id": "e_bundle_size_performance",
+      "source": "bundle_size",
+      "target": "performance",
+      "label": "влияет"
+    },
+    {
+      "id": "e_routing_micro_frontends",
+      "source": "routing",
+      "target": "micro_frontends",
+      "label": "вариант интеграции"
+    },
+    {
+      "id": "e_state_management_reactivity",
+      "source": "state_management",
+      "target": "reactivity",
+      "label": "основа обновлений"
+    },
+    {
+      "id": "e_react_state_management",
+      "source": "react",
+      "target": "state_management",
+      "label": "часто дополняется"
+    },
+    {
+      "id": "e_vue_typescript",
+      "source": "vue",
+      "target": "typescript",
+      "label": "поддерживает"
+    },
+    {
+      "id": "e_react_vite",
+      "source": "react",
+      "target": "vite",
+      "label": "часто используется"
+    },
+    {
+      "id": "e_vue_vite",
+      "source": "vue",
+      "target": "vite",
+      "label": "часто используется"
+    },
+    {
+      "id": "e_svelte_vite",
+      "source": "svelte",
+      "target": "vite",
+      "label": "часто используется"
+    },
+    {
+      "id": "e_web_components_micro_frontends",
+      "source": "web_components",
+      "target": "micro_frontends",
+      "label": "подход к интеграции"
+    },
+    {
+      "id": "e_web_components_compares_react",
+      "source": "web_components",
+      "target": "react",
+      "label": "сравнивается с",
+      "animated": false
+    },
+    {
+      "id": "e_web_components_compares_vue",
+      "source": "web_components",
+      "target": "vue",
+      "label": "сравнивается с",
+      "animated": false
+    },
+    {
+      "id": "e_web_components_compares_angular",
+      "source": "web_components",
+      "target": "angular",
+      "label": "сравнивается с",
+      "animated": false
+    }
+  ]
+}
